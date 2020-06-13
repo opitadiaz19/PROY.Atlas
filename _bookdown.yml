@@ -1,0 +1,30 @@
+book_filename: "PropuestaProy"
+repo: https://github.com/juliosergio/miniBayes
+output_dir: docs
+before_chapter_script: ["R/RasterFuncs.R"]
+#rmd_files: ["index.Rmd","01-intro.Rmd", "06-references.Rmd"] #, "01-BayesExplicado.Rmd", "02-Ejemplo.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
+language:
+  label:
+    fig: 'FIGURA '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    lem: 'Lema '
+    cor: 'Corolario '
+    prp: 'Proposición '
+    cnj: 'Conjectura '
+    def: 'Definición '
+    exm: 'Ejemplo '
+    exr: 'Ejercicio '
+    proof: 'Prueba. '
+    remark: 'Remark. '
+    solution: 'Solución. '
+    refname: 'Referencias '
+    bibname: 'Referencias '
+  ui:
+    edit: "Edit"
+    chapter_name: ""
+    references_name: "Referencias "
+
