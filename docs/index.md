@@ -5,11 +5,11 @@ author:
 -  "Efraín Mateos Farfán" 
 -  "Julio Sergio Santana"
 -  "Edmundo Pedroza González"
-date: "2020-06-13"
+date: "2020-09-29"
 site: bookdown::bookdown_site
 documentclass: article
 bibliography: [ss.bib]
-biblio-style: apalike
+# biblio-style: apalike
 link-citations: yes
 description: "Propuesta del Proyecto de plantilla para la generación de libros interactivos con contenidos gráficos y numéricos"
 ---

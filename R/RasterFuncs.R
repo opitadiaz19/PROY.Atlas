@@ -1,27 +1,23 @@
 #
-# RasterVels.R
+# RasterFuncs.R
 #
 # Source: https://www.r-spatial.org/r/2017/01/30/mapedit_intro.html
 # Observa: simpleMapedit.R y ../Proy.CEMIE.ALGUNDIA/ViewTest.R
 # ===================
 
-# La diferencia con el ejemplo de la liga es que cambié
-# mapview por leaflet.
-# También voy a agrear el editor de leafpm 
-
 library(ncdf4)
 library(leaflet)
-# library(mapview)
-library(mapedit)
-library(leafpm)
+#>>>> library(mapview)
+#>> library(mapedit)
+#>> library(leafpm)
 library(raster)
 
-sourdir <- '/media/checo/7B2C787106E895ED/Proy.CEMIE.ALGUNDIA/'
+rootdir <- '/media/checo/7B2C787106E895ED/'
 
-miPath <- "file:///media/checo/7B2C787106E895ED/PROY.Atlas/"
+# miPath <- "file:///media/checo/7B2C787106E895ED/PROY.Atlas/"
 
-source("/media/checo/7B2C787106E895ED/RR/MiniBiblioteca.R", chdir = T)
-source(sourdir %,% "RRarrows.R", chdir = T)
+source(paste0(rootdir, "RR/MiniBiblioteca.R"), chdir = T)
+source(rootdir %,% "Proy.CEMIE.ALGUNDIA/RRarrows.R", chdir = T)
 # debugSource(sourdir %,% "RRarrows.R", chdir = T)
 
 # =========== PROCESAMIENTO DE INFO RASTER y VECTORES =============

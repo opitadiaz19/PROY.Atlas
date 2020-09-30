@@ -1,43 +1,56 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[]{article}
+\documentclass[
+]{article}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
-\else % if luatex or xelatex
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\usepackage{hyperref}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-            pdftitle={ATLAS DEL POTENCIAL ENERGÉTICO DE OCÉANOS},
-            pdfauthor={Efraín Mateos Farfán; Julio Sergio Santana; Edmundo Pedroza González},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
+  pdftitle={ATLAS DEL POTENCIAL ENERGÉTICO DE OCÉANOS},
+  pdfauthor={Efraín Mateos Farfán; Julio Sergio Santana; Edmundo Pedroza González},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
-\usepackage{graphicx,grffile}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -46,25 +59,14 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
-
-% set default figure placement to htbp
+% Set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
 \usepackage{booktabs}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
@@ -74,20 +76,26 @@
 % \renewcommand{\bibname}{Referencias}
 \renewcommand{\refname}{Referencias}
 \renewcommand\spanishtablename{Tabla}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
+  {\par}
+
+\title{ATLAS DEL POTENCIAL ENERGÉTICO DE OCÉANOS}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\usepackage[]{natbib}
-\bibliographystyle{apalike}
-
-\title{ATLAS DEL POTENCIAL ENERGÉTICO DE OCÉANOS}
-\providecommand{\subtitle}[1]{}
 \subtitle{Plantilla para la generación de libros interactivos con contenidos gráficos y numéricos}
 \author{Efraín Mateos Farfán \and Julio Sergio Santana \and Edmundo Pedroza González}
-\date{2020-06-13}
+\date{2020-09-29}
 
 \begin{document}
 \maketitle
@@ -119,7 +127,7 @@ Desde su creación, hace más de dos años, el CEMIE-Océano ha generado una gra
 \hypertarget{subsecciuxf3n-para-incluir-referencias}{%
 \subsection{Subsección para incluir referencias}\label{subsecciuxf3n-para-incluir-referencias}}
 
-En el objetivo se hace referencia a \emph{libros con contenidos gráficos y numéricos en forma de atlas interactivos}, lo que es una especialización del concepto más general: \emph{libros digitales interactivos}. El concepto de libros interactivos tiene su origen en los libros \emph{pop-up} para niños, creados por Julian Wehr en la década de 1940 \citep{MBS2002, Bohem2002}. Estos libros tangibles, permiten a los niños interactuar con su contenido, mediante el accionar de las pestañas de papel o cartón, provistas en el libro para \emph{animar} o dar movilidad a las ilustraciones, tal como el que se muestra en la animación de abajo. Más tarde, con el advenimiento de los libros digitales o electrónicos, los portales \emph{Web} y los libros en línea \citep{Reilly2003}, la idea de que los lectores pudieran interactuar con su contenido permeó de los libros tangibles a los libros digitales en línea.
+En el objetivo se hace referencia a \emph{libros con contenidos gráficos y numéricos en forma de atlas interactivos}, lo que es una especialización del concepto más general: \emph{libros digitales interactivos}. El concepto de libros interactivos tiene su origen en los libros \emph{pop-up} para niños, creados por Julian Wehr en la década de 1940 (Boehm \& Ziegler, \protect\hyperlink{ref-Bohem2002}{2002}; Movable Book Society, \protect\hyperlink{ref-MBS2002}{2002}). Estos libros tangibles, permiten a los niños interactuar con su contenido, mediante el accionar de las pestañas de papel o cartón, provistas en el libro para \emph{animar} o dar movilidad a las ilustraciones, tal como el que se muestra en la animación de abajo. Más tarde, con el advenimiento de los libros digitales o electrónicos, los portales \emph{Web} y los libros en línea (Reilly, \protect\hyperlink{ref-Reilly2003}{2003}), la idea de que los lectores pudieran interactuar con su contenido permeó de los libros tangibles a los libros digitales en línea.
 
 \hypertarget{oceano-pacuxedfico}{%
 \section{Oceano Pacífico}\label{oceano-pacuxedfico}}
@@ -230,6 +238,16 @@ Donec consequat maximus nunc, sed porttitor neque aliquet sed. In consectetur, m
 
 We have finished a nice book.
 
-\bibliography{ss.bib}
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-Bohem2002}{}%
+Boehm, A., \& Ziegler, R. (2002). A Julian Wehr miscellany: Unrecorded animated books, foreign-language animated books, and other works. \emph{Bulletin of Bibliography}, \emph{59}(3).
+
+\leavevmode\hypertarget{ref-MBS2002}{}%
+Movable Book Society. (2002). Julian Wehr research. \emph{Movable Stationery}, \emph{10}(1).
+
+\leavevmode\hypertarget{ref-Reilly2003}{}%
+Reilly, E. D. (2003). \emph{Milestones in computer science and information technology} (p. 392). Greenwood Press.
+\end{cslreferences}
 
 \end{document}
