@@ -5,11 +5,14 @@ author:
 -  "Efraín Mateos Farfán" 
 -  "Julio Sergio Santana"
 -  "Edmundo Pedroza González"
-date: "2020-09-29"
+date: "2020-10-05"
 site: bookdown::bookdown_site
 documentclass: article
 bibliography: [ss.bib]
 # biblio-style: apalike
+# FUENTEs PARA USAR apa.csl en vez de apalike:
+#  https://stackoverflow.com/questions/50596158/how-to-change-to-another-bibliography-style-in-bookdown
+# https://stackoverflow.com/questions/48965247/use-csl-file-for-pdf-output-in-bookdown/49145699#49145699
 link-citations: yes
 description: "Propuesta del Proyecto de plantilla para la generación de libros interactivos con contenidos gráficos y numéricos"
 ---

@@ -30,6 +30,7 @@ VelMap <- function (f0, profs=1:3, npts=2000, t0=1) { # prof IN 1:3
   
   m <- leaflet() %>% addTiles() # mapa inicial sin nada
   
+  opt <- options(warn = -1) # apagamos warnings
   for (prof in profs) {
     U <- raster(f0, var = "u_psi", band = prof, lvar=4, level=t0) 
     V <- raster(f0, var = "v_psi", band = prof, lvar=4, level=t0) 
@@ -103,7 +104,9 @@ VelMap <- function (f0, profs=1:3, npts=2000, t0=1) { # prof IN 1:3
                 values = values(rapidez), 
                 title = "Rapidez prof" %,% prof,
                 group = "prof" %,% prof)
-  }
+  } # END-for (prof in profs)
+  
+  options(opt) # prendemos warings
   
   m <- m %>%
     addLayersControl(
@@ -124,6 +127,8 @@ MuestraVar <- function (f0, v, profs=1:3, t0=1) { # prof IN 1:3
   # prof: profundidad codificada IN 1:3
   
   m <- leaflet() %>% addTiles() # mapa inicial sin nada
+  
+  opt <- options(warn = -1) # apagamos warnings
   
   for (prof in profs) {
     V <- raster(f0, var = v, band = prof, lvar=4, level=t0) 
@@ -147,6 +152,8 @@ MuestraVar <- function (f0, v, profs=1:3, t0=1) { # prof IN 1:3
                 title = v %,% " prof" %,% prof,
                 group = "prof" %,% prof)
   }
+  
+  options(opt) # prendemos warnings
   
   m <- m %>%
     addLayersControl(
