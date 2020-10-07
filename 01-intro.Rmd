@@ -3,7 +3,7 @@
 El Centro Mexicano de Innovación en Energía Océano (CEMIE-Océano), reune a un número importante de centros de investigación. Su misión es generar productos, técnicas y tecnologías innovadoras que exploten la diversidad de recursos energéticos océanicos disponibles para suministrar de manera sustentable y rentable una parte cada vez mayor de la demanda energética de la República Mexicana.
 
 Desde su creación, hace más de dos años, el CEMIE-Océano ha generado una gran cantidad de información, producto de las investigaciones y trabajos realizados. Esta información debe ser divulgada para permitir la vinculación entre los generadores de información con sectores de índole económica o industrial. Por la naturaleza de la información generada, gran cantidad de ésta puede ser presentada como libros tipo atlas.
-<!-- Comentario para probar algo -->
+<!-- Comentario 2 para probar algo -->
 
 ## Subsección para incluir referencias
 
