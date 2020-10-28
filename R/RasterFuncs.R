@@ -12,12 +12,14 @@ library(leaflet)
 #>> library(leafpm)
 library(raster)
 
-rootdir <- '/media/checo/7B2C787106E895ED/'
+# rootdir <- '/media/checo/7B2C787106E895ED/'
 
 # miPath <- "file:///media/checo/7B2C787106E895ED/PROY.Atlas/"
 
-source(paste0(rootdir, "RR/MiniBiblioteca.R"), chdir = T)
-source(rootdir %,% "Proy.CEMIE.ALGUNDIA/RRarrows.R", chdir = T)
+RRDir <- "~/RR"
+
+source(paste0(RRDir, "/MiniBiblioteca.R"), chdir = T)
+source(RRDir %,% "/RRarrows.R", chdir = T)
 # debugSource(sourdir %,% "RRarrows.R", chdir = T)
 
 # =========== PROCESAMIENTO DE INFO RASTER y VECTORES =============
