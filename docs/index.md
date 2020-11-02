@@ -5,7 +5,7 @@ author:
 -  "Efraín Mateos Farfán" 
 -  "Julio Sergio Santana"
 -  "Edmundo Pedroza González"
-date: "2020-10-28"
+date: "2020-10-29"
 site: bookdown::bookdown_site
 documentclass: article
 bibliography: [ss.bib]

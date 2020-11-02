@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.6.5)  28 OCT 2020 12:59
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.6.5)  29 OCT 2020 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1278,23 +1278,22 @@ File: images/golfomex01.png Graphic file (type bmp)
 [6] [7]
 File: images/golfomex02.png Graphic file (type bmp)
 <images/golfomex02.png>
-[8] [9]
+[8] [9] [10]
 File: images/golfocalif01.png Graphic file (type bmp)
 <images/golfocalif01.png>
-[10]
 File: images/golfocalif02.png Graphic file (type bmp)
 <images/golfocalif02.png>
 [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
-[12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+[12] [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
 (./PropuestaProy.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 257.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 257.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 259.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 259.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
  26324 strings out of 494906
@@ -1305,4 +1304,4 @@ Here is how much of TeX's memory you used:
  40 hyphenation exceptions out of 8191
  59i,6n,117p,10408b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on PropuestaProy.pdf (12 pages).
+Output written on PropuestaProy.pdf (13 pages).

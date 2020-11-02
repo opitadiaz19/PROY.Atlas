@@ -2,7 +2,10 @@
 
 ## Rapidez y velocidad en el Golfo de México
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin suscipit varius. Cras sit amet magna in arcu pretium malesuada non et tortor. Suspendisse potenti. Pellentesque eu ullamcorper velit, eu gravida risus. Aliquam fermentum tellus ac velit rhoncus efficitur ac eu dui. Proin urna arcu, tempus a sagittis volutpat, rutrum sed ex. Ut tempus quis ligula vitae aliquam.
+Se configuró una malla para el océano Atlántico Mexicano, que básicamente comprende el Golfo de México.
+
+Las salidas del modelo, muestran las estructuras reportadas en el caribe mexicano, como son la corriente de lazo, liberación de remolinos al interior del Golfo de México y velocidades superficiales intensas y persistentes en la península de Yucatán, tal como se puede apreciar en la Figura \@ref(fig:Mapa03). Actualmente, se está en el proceso de una validación cuantitativa de las mismas.
+
 
 
 
